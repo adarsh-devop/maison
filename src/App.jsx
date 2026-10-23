@@ -2,12 +2,10 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-// import Home from "./components/Home";
 import Footer from "./components/footer";
 import Collction from "./pages/Collction";
-import Contact from "./components/Contact";
-import About from "./pages/About"
-// import Collction from "./pages/Collction";
+import About from "./components/About";
+import Ourstory from "./pages/Ourstory"
 
 const App = () => {
   return (
@@ -16,8 +14,8 @@ const App = () => {
       <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/coll" element={<Collction/>}/>
-          <Route path="/con" element={<Contact/>}/>
-          <Route path="/abo" element={<About/>}/>
+          <Route path="/con" element={<About/>}/>
+          <Route path="/abo" element={<Ourstory/>}/>
       </Routes>
       <Footer/>
     </div>

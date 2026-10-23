@@ -4,7 +4,7 @@ const Home = () => {
     <div className="flex items-center bg-[#F5EBD0] h-screen">
         <div className="flex flex-col p-10 gap-5 ">
             <p className="uppercase text-[#7f011f] font-medium">Designed for the everyday</p>
-            <p className="font-osw text-6xl text-[#7f011f] ">A little more you.</p>
+            <p className="font-ply text-6xl text-[#7f011f] ">A little more you.</p>
             <p className="text-[#7f011f] font-extralight font-out">Discover thoughtfully curated pieces that bring simplicity, character, and timeless style into your everyday life.</p>
             <div className="flex gap-10 font-ply">
                 <button className="bg-[#7f011f]  border border-[#7f011f] text-blue-50 p-3 rounded-md px-4 hover:bg-[#F5EBD0]  hover:text-[#7f011f]">Explore</button>
