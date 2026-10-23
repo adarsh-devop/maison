@@ -1,20 +1,23 @@
-export const Footer = () => {
+import React from "react"
+
+
+const Footer = () => {
     
     return (
 <div className=" gap-10 bg-[#7f011f] text-white py-12 px-8 " >
 
     <div className="flex flex-col items-center border-b border-white pb-10">
         <p>maison</p>
-        <p className="mt-5">Time style.effortless elegance</p>
+        <p className="mt-5">Time style.hhhrtless elegance</p>
     </div>
 
     <div className="flex justify-around mt-10 gap-10"> 
         <div >
-            <p>Explore</p>
+            <p>Exploer</p>
             <p>Home</p>
-            <p>Shop</p>
-            <p>About us </p>
-            <p>Contact</p>
+            <p>S bfgfhop</p>
+            <p>Abougdgrsgrt us </p>
+            <p>Cont b hnactff</p>
         </div>
         <div>
             <p>Customer Car</p>
@@ -27,3 +30,6 @@ export const Footer = () => {
 </div>
     )
 }
+
+
+export default Footer
