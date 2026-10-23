@@ -10,7 +10,7 @@ const Navbar = () => (
       <Link to ="/coll" className="cursor-pointer text-[#7f011f] font-medium">Collction</Link>
     </div>
 
-    <button className="bg-[#7f011f] text-blue-50 outline-0 px-4 py-1.5 rounded-md hover:bg-[#F5EBD0] hover:text-[#7f011f] transition duration-500">Login</button>
+    <button className="bg-[#7f011f] text-blue-50 outline-0 px-4 py-1.5 rounded-md hover:bg-[#F5EBD0] hover:text-[#7f011f] border border-[#7f011f] transition duration-400">Login</button>
   </div>
 )
 
