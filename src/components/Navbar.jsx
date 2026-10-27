@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom"
 const Navbar = () => (
+  
   <div className="p-5 px-6 bg-[#F5EBD0] flex  justify-between items-center border border-b-rose-200  ">
     <div className="text-2xl font-bold cursor-pointer text-[#7f011f]">MAISON</div>
 
