@@ -7,6 +7,7 @@ import About from "./components/About";
 import Ourstory from "./pages/Ourstory"
 import Discover from "./components/Discover ";
 import Layout from "./Layout/Layout";
+import ProductDetils from "./pages/ProductDetils";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/coll" element={<Collction/>}/>
           <Route path="/con" element={<About/>}/>
           <Route path="/abo" element={<Ourstory/>}/>
+          <Route path="/product/:id"  element={<ProductDetils/>}/>
       </Routes>
       <Footer/>
     </div>

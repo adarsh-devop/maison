@@ -1,6 +1,6 @@
 
 import products from "../data/product";
-
+import { Link } from "react-router-dom";
 const Collection = () => {
   return (
     <div className="bg-[#F5EBD0] p-5">
@@ -20,7 +20,8 @@ const Collection = () => {
 
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {products.map((product) => (
-          <div key={product.id} className="flex flex-col">
+          <Link to={`/product/${product.id}`}
+           key={product.id} className="flex flex-col">
             <img
               src={product.image}
               alt={product.name}
@@ -41,7 +42,8 @@ const Collection = () => {
             <button className="mt-3 w-full bg-[#F5EBD0] px-4 py-3 text-[#7f011f] hover:bg-[#7f011f] hover:text-[#F5EBD0] border border-[#7f011f] transition duration-400">
               View Product
             </button>
-          </div>
+            
+          </Link>
         ))}
       </div>
     </div>
