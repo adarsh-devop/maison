@@ -2,10 +2,10 @@ import React from 'react'
 import Home from '../components/Home'
 import Discover from '../components/Discover '
 
-const Layout = () => {
+const Layout = ({}) => {
   return (
     <div>
-        <Home/>
+        <Home />
         <Discover/>
     </div>
   )
