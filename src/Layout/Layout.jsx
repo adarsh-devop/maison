@@ -10,9 +10,6 @@ const Layout = ({}) => {
     <div>
         <Home />
         <Discover/>
-        <Showhide/>
-        <Counter/>
-        <Darkmod/>
     </div>
   )
 }
