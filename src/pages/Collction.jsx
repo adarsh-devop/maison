@@ -34,9 +34,9 @@ const Collection = () => {
 
             <p className="mt-2 text-[#7f011f]">
               ₹{product.offerPrice}
-              <span className="ml-2 text-gray-500 line-through">
+              <p className="ml-2 text-gray-500 line-through">
                 ₹{product.price}
-              </span>
+              </p>
             </p>
 
             <button className="mt-3 w-full bg-[#F5EBD0] px-4 py-3 text-[#7f011f] hover:bg-[#7f011f] hover:text-[#F5EBD0] border border-[#7f011f] transition duration-400">

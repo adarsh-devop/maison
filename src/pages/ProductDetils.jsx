@@ -35,9 +35,9 @@ const ProductDetils = () => {
               ${productfound.offerPrice}
             </p>
 
-            <span className="ml-2 text-gray-500 line-through">
+            <p className="ml-2 text-gray-500 line-through">
               ${productfound.price}
-            </span>
+            </p>
           </div>
           <p className="mt-10 font-light font-ply text-[#7f011f]">
             {productfound.description}

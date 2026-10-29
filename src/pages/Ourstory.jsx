@@ -1,4 +1,5 @@
 const Ourstory = () => {
+  
   return (
     <div className="flex flex-row items-center h-screen bg-[#F5EBD0] ">
       <div className="flex flex-col gap-4 max-w-3xl mx-auto p-5">

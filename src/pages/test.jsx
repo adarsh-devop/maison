@@ -25,9 +25,9 @@ const Collection = () => {
 
             <p className="mt-2 font-bold text-red-800">
               ₹{product.offerPrice}
-              <span className="ml-2 text-sm text-gray-400 line-through">
+              <p className="ml-2 text-sm text-gray-400 line-through">
                 ₹{product.price}
-              </span>
+              </p>
             </p>
 
             <button className="mt-3 w-full rounded bg-red-800 p-2 text-white hover:bg-red-900">
