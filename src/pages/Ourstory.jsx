@@ -1,18 +1,25 @@
+import { useState } from "react";
+
 const Ourstory = () => {
-  
+  const [nightMode, setNightMode] = useState(false);
+
+const darkMode = () => {
+    setNightMode((prve)=>!prve);
+  }
+
   return (
-    <div className="flex flex-row items-center h-screen bg-[#F5EBD0] ">
+    <div className={`flex flex-row items-center h-screen ${nightMode ?" bg-[#F5EBD0]": "bg-[#7f011f]"}`}>
       <div className="flex flex-col gap-4 max-w-3xl mx-auto p-5">
-        <p className="font-extralight  text-[#7f011f]">
+        <p className={`font-extralight ${nightMode ?"text-[#7f011f]":"text-[#F5EBD0]"}`}>
           The Story Behind MAISON
         </p>
-        <h1 className=" font-ply text-7xl  text-[#7f011f]">
+        <h1 className={`font-ply text-7xl ${nightMode ?"text-[#7f011f]":"text-[#F5EBD0]"}`}>
           More than fashion.
         </h1>
-        <p className="font-extralight font-osw text-2xl  text-[#7f011f]">
+        <p className={`font-extralight font-osw text-2xl ${nightMode ?"text-[#7f011f]":"text-[#F5EBD0]"}`}>
           It's a statement.
         </p>
-        <p className="font-extralight font-osw text-2xl  text-[#7f011f]">
+        <p className={`font-extralight font-osw text-2xl ${nightMode ?"text-[#7f011f]":"text-[#F5EBD0]"}`}>
           MAISON was created around a simple belief: great style should feel
           effortless. We bring together timeless menswear, thoughtful details,
           and everyday essentials to help you express your individuality. From
@@ -27,6 +34,8 @@ const Ourstory = () => {
           src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1000"
         />
       </div>
+      <button className={`absolute top-5 right-5 p-3 rounded-sm outline-0 px-4 py-1.5 rounded-md ${nightMode ?"text-[#7f011f] bg-[#F5EBD0] hover:bg-[#F5EBD0] hover:text-[#7f011f] border border-[#7f011f]" : "text-[#F5EBD0] bg-[#7f011f] hover:bg-[#7f011f] hover:text-[#F5EBD0] border border-[#7f011f]"}`}
+        onClick={darkMode}>{nightMode? "DARK":"LIGHT"}</button>
     </div>
   );
 };
