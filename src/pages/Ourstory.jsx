@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 const Ourstory = () => {
-  const [nightMode, setNightMode] = useState(false);
+  const [nightMode, setNightMode] = useState(true);
 
 const darkMode = () => {
     setNightMode((prve)=>!prve);
   }
 
   return (
-    <div className={`flex flex-row items-center h-screen ${nightMode ?" bg-[#F5EBD0]": "bg-[#7f011f]"}`}>
+    <div className={`flex flex-row items-center h-screen ${nightMode ?"bg-[#F5EBD0]": "bg-[#0c0c0c]"}`}>
       <div className="flex flex-col gap-4 max-w-3xl mx-auto p-5">
         <p className={`font-extralight ${nightMode ?"text-[#7f011f]":"text-[#F5EBD0]"}`}>
           The Story Behind MAISON
@@ -34,7 +34,7 @@ const darkMode = () => {
           src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1000"
         />
       </div>
-      <button className={`absolute top-5 right-5 p-3 rounded-sm outline-0 px-4 py-1.5 rounded-md ${nightMode ?"text-[#7f011f] bg-[#F5EBD0] hover:bg-[#F5EBD0] hover:text-[#7f011f] border border-[#7f011f]" : "text-[#F5EBD0] bg-[#7f011f] hover:bg-[#7f011f] hover:text-[#F5EBD0] border border-[#7f011f]"}`}
+      <button className={`absolute top-5 right-5 p-3 rounded-sm outline-0 px-4 py-1.5 rounded-md ${nightMode ?"text-[#F5EBD0] bg-black border border-[#7f011f]" : "text-[#F5EBD0] bg-[#7f011f] border border-[#7f011f]"}`}
         onClick={darkMode}>{nightMode? "DARK":"LIGHT"}</button>
     </div>
   );
