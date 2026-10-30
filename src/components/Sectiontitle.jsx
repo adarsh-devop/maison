@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../Context/ThemeContext";
 
-const Sectiontitle = ({ title, maintitle, m2, description, button }) => {
+const Sectiontitle = ({ title, maintitle, m2, description }) => {
   const { nightMode } = useContext(ThemeContext);
 
   return (
