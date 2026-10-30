@@ -1,50 +1,85 @@
 
+import { useContext } from "react";
 import products from "../data/product";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../Context/ThemeContext";
+
 const Collection = () => {
+  const { nightMode } = useContext(ThemeContext);
+
   return (
-    <div className="bg-[#F5EBD0] p-5">
+    <div className={`p-5 ${
+      nightMode ? "bg-[#0c0c0c]" : "bg-[#F5EBD0]"
+    }`}>
+
       <section className="flex flex-col items-center pb-6">
-        <p className="font-light uppercase text-[#7f011f]">
+
+        <p className={`font-light uppercase ${
+          nightMode ? "text-[#F5EBD0]" : "text-[#7f011f]"
+        }`}>
           The maison edit
         </p>
 
-        <h2 className="text-xl sm:text-2xl lg:text-4xl font-ply text-[#7f011f]">
+        <h2 className={`text-xl sm:text-2xl lg:text-4xl font-ply ${
+          nightMode ? "text-[#F5EBD0]" : "text-[#7f011f]"
+        }`}>
           Our Collection
         </h2>
 
-        <p className="text-[#7f011f] font-light">
+        <p className={`font-light ${
+          nightMode ? "text-[#F5EBD0]" : "text-[#7f011f]"
+        }`}>
           Discover thoughtfully selected menswear
         </p>
+
       </section>
 
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
         {products.map((product) => (
-          <Link to={`/product/${product.id}`}
-           key={product.id} className="flex flex-col">
+          <Link
+            to={`/product/${product.id}`}
+            key={product.id}
+            className="flex flex-col"
+          >
+
             <img
               src={product.image}
               alt={product.name}
               className="h-64 w-full rounded object-cover"
             />
 
-            <h3 className="mt-3 text-lg font-medium">
+            <h3 className={`mt-3 text-lg font-medium ${
+              nightMode ? "text-[#F5EBD0]" : "text-[#7f011f]"
+            }`}>
               {product.name}
             </h3>
 
-            <p className="mt-2 text-[#7f011f]">
-              ₹{product.offerPrice}
-              <p className="ml-2 text-gray-500 line-through">
-                ₹{product.price}
-              </p>
-            </p>
+            <div className="mt-2 flex items-center">
+              <span className={`${
+                nightMode ? "text-[#F5EBD0]" : "text-[#7f011f]"
+              }`}>
+                ₹{product.offerPrice}
+              </span>
 
-            <button className="mt-3 w-full bg-[#F5EBD0] px-4 py-3 text-[#7f011f] hover:bg-[#7f011f] hover:text-[#F5EBD0] border border-[#7f011f] transition duration-400">
+              <span className={`ml-2 line-through ${
+                nightMode ? "text-gray-400" : "text-gray-500"
+              }`}>
+                ₹{product.price}
+              </span>
+            </div>
+
+            <button className={`mt-3 w-full px-4 py-3 border transition duration-300 ${
+              nightMode
+                ? "bg-[#F5EBD0] text-[#7f011f] border-[#F5EBD0] hover:bg-black hover:text-[#F5EBD0]"
+                : "bg-[#F5EBD0] text-[#7f011f] border-[#7f011f] hover:bg-[#7f011f] hover:text-[#F5EBD0]"
+            }`}>
               View Product
             </button>
-            
+
           </Link>
         ))}
+
       </div>
     </div>
   );

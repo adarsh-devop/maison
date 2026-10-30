@@ -1,5 +1,10 @@
-import products from "../data/product";
+
+import { useContext } from "react";
+import { ThemeContext } from "../Context/ThemeContext";
+
 const Discover = () => {
+  const { nightMode } = useContext(ThemeContext);
+
   const products = [
     {
       id: 1,
@@ -31,17 +36,36 @@ const Discover = () => {
   ];
 
   return (
-    <div className="flex min-h-screen flex-col items-center bg-[#f7f2e6]">
-      <div className="mx-auto flex max-w-3xl flex-col items-center gap-5 p-5 pt-6 ">
-        <p className="rounded-md border border-[#7f011f] px-2 text-center text-[#7f011f]">
+    <div
+      className={`flex min-h-screen flex-col items-center ${
+        nightMode ? "bg-[#0c0c0c]" : "bg-[#f7f2e6]"
+      }`}
+    >
+      <div className="mx-auto flex max-w-3xl flex-col items-center gap-5 p-5 pt-6">
+
+        <p
+          className={`rounded-md border px-2 text-center ${
+            nightMode
+              ? "border-[#F5EBD0] text-[#F5EBD0]"
+              : "border-[#7f011f] text-[#7f011f]"
+          }`}
+        >
           The MAISON Edit
         </p>
 
-        <h1 className="text-center font-ply text-5xl text-[#7f011f]">
+        <h1
+          className={`text-center font-ply text-5xl ${
+            nightMode ? "text-[#F5EBD0]" : "text-[#7f011f]"
+          }`}
+        >
           Discover your style.
         </h1>
 
-        <p className="text-center text-[#7f011f]">
+        <p
+          className={`text-center ${
+            nightMode ? "text-[#F5EBD0]" : "text-[#7f011f]"
+          }`}
+        >
           Everyday essentials, timeless classics, and carefully selected pieces
           designed to make every outfit feel effortless.
         </p>
@@ -49,22 +73,24 @@ const Discover = () => {
 
       <div className="mx-auto grid w-full max-w-6xl grid-cols-3 gap-6 px-5">
         {products.map((product) => (
-          <div key={product.id} className="flex flex-col relative">
+          <div key={product.id} className="relative flex flex-col">
+
             <div>
               <p className="absolute top-2 left-2 rounded-md bg-[#7f011f] px-2 text-sm text-blue-50">
                 {product.category}
               </p>
-              <p className="absolute bottom-5 left-2 rounded-md px-2 text-amber-100 text-5xl font-ply">
+
+              <p className="absolute bottom-5 left-2 rounded-md px-2 text-5xl font-ply text-amber-100">
                 {product.name}
               </p>
             </div>
+
             <img
               src={product.image}
               alt={product.name}
               className="h-64 w-full rounded-2xl object-cover"
             />
 
-            <h3 className="mt-3 text-lg font-medium"></h3>
           </div>
         ))}
       </div>

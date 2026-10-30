@@ -11,7 +11,7 @@ const darkmode = () => {
 };
 
   return (
-  <ThemeContext.Provider value={{ nightMode, setNightMode }}>
+  <ThemeContext.Provider value={{ nightMode, darkmode  }}>
     {children}
   </ThemeContext.Provider>
 );
