@@ -1,30 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 const Counter = () => {
-    
-    const [count, setCount]=useState(0)
-    
-    const add = () => {
-        setCount((prev) =>  prev + 1)
-    }
+  const [count, setCount] = useState(0);
 
-    const sub = () =>{
-        setCount((prev)=> prev - 1)
+  const increment = () => {
+    if (count < 10) {
+      setCount((prev) => prev + 1);
     }
-    const reset=()=>{
-        setCount(0)
-    }
+  };
 
-    return (
-    <div>
+  const dicrement = () => {
+    if (count > 0) {
+      setCount((prev) => prev - 1);
+    }
+  };
+  const zreo = () => {
+    setCount(0);
+  };
+  return (
+    <div className="flex gap-3">
         <p>{count}</p>
-        <button onClick={add}>add</button>
-        <button onClick={sub}>sub</button>
-        <button onClick={reset}>reset</button>
+      <button onClick={increment}>add</button>
+      <button onClick={dicrement}>sub</button>
+      <button onClick={zreo}>zero</button>
     </div>
-    
+  );
+};
 
-  )
-}
-
-export default Counter
+export default Counter;
