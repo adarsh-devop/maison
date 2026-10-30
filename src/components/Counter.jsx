@@ -6,6 +6,10 @@ const Counter = () => {
   const increment = () => {
     if (count < 10) {
       setCount((prev) => prev + 1);
+     
+    }
+    else{
+        alert("no more then 10 numbers")
     }
   };
 
