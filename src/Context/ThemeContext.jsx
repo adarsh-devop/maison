@@ -1,10 +1,20 @@
-import React from 'react'
-import T
+import React, { createContext, useState } from 'react'
 
-const ThemeContext = () => {
+export const ThemeContext = createContext();
+
+const ThemeProvider = ({children}) => {
+
+const [nightMode, setNightMode] = useState(false);
+
+const darkmode = () => {
+  setNightMode((prev) => !prev);
+};
+
   return (
-    <div></div>
-  )
+  <ThemeContext.Provider value={{ nightMode, setNightMode }}>
+    {children}
+  </ThemeContext.Provider>
+);
 }
 
-export default ThemeContext
+export default ThemeProvider
