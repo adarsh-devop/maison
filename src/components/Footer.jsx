@@ -11,7 +11,7 @@ function Footer() {
       className={`${
         nightMode
           ? "bg-black text-[#F5EBD0]"
-          : "bg-[#F5EBD0] text-[#7F011F]"
+          : "bg-[#7f011f]  text-[#F5EBD0]"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-14">
@@ -24,7 +24,7 @@ function Footer() {
             </a>
 
             <p className={`mt-5 max-w-sm text-sm leading-7 ${
-              nightMode ? "text-[#F5EBD0]/70" : "text-[#7F011F]/70"
+              nightMode ? "text-[#F5EBD0]/70" : "text-[#F5EBD0]/70"
             }`}>
               Thoughtfully curated essentials for people who believe
               that good design lives in the details.
@@ -34,7 +34,7 @@ function Footer() {
           <div>
             <h3 className="font-semibold mb-5">Explore</h3>
             <ul className={`space-y-3 text-sm ${
-              nightMode ? "text-[#F5EBD0]/70" : "text-[#7F011F]/70"
+              nightMode ? "text-[#F5EBD0]/70" : "text-[#F5EBD0]/70"
             }`}>
               <li><a href="/" className="hover:opacity-70 transition">Home</a></li>
               <li><a href="#collections" className="hover:opacity-70 transition">Collections</a></li>
@@ -45,7 +45,7 @@ function Footer() {
           <div>
             <h3 className="font-semibold mb-5">Get in touch</h3>
             <ul className={`space-y-3 text-sm ${
-              nightMode ? "text-[#F5EBD0]/70" : "text-[#7F011F]/70"
+              nightMode ? "text-[#F5EBD0]/70" : "text-[#F5EBD0]/70"
             }`}>
               <li>
                 <a href="mailto:hello@maison.example" className="hover:opacity-70 transition">
@@ -62,7 +62,7 @@ function Footer() {
         <div className={`mt-12 pt-6 border-t flex flex-col sm:flex-row justify-between gap-3 text-xs ${
           nightMode
             ? "border-[#F5EBD0]/20 text-[#F5EBD0]/60"
-            : "border-[#7F011F]/20 text-[#7F011F]/60"
+            : "border-[#7F011F]/20 text-[#F5EBD0] /60"
         }`}>
           <p>© 2026 MAISON. All rights reserved.</p>
           <p>Made with intention. Designed for everyday living.</p>

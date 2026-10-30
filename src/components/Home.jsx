@@ -7,7 +7,7 @@ const Home = () => {
 
   return (
     <div
-      className={`flex items-center h-screen ${
+      className={`flex flex-col md:flex flex-row items-center h-screen ${
         nightMode ? "bg-[#0c0c0c]" : "bg-[#F5EBD0]"
       }`}
     >

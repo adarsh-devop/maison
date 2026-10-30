@@ -9,8 +9,7 @@ const Layout = ({}) => {
     <div>
         <Home />
         <Discover/>
-        <Counter/>
-        <Todo/>
+        
     </div>
   )
 }

@@ -9,6 +9,7 @@ import Discover from "./components/Discover ";
 import Layout from "./Layout/Layout";
 import ProductDetils from "./pages/ProductDetils";
 import ThemeeProvider from "./Context/ThemeContext";
+import Todo from "./components/Todo";
 
 const App = () => {
   return (
@@ -22,6 +23,8 @@ const App = () => {
           <Route path="/con" element={<About/>}/>
           <Route path="/abo" element={<Ourstory/>}/>
           <Route path="/product/:id"  element={<ProductDetils/>}/>
+          <Route path="/todo"  element={<Todo/>}/>
+          
       </Routes>
       <Footer/>
     </div>
