@@ -8,9 +8,11 @@ import Ourstory from "./pages/Ourstory"
 import Discover from "./components/Discover ";
 import Layout from "./Layout/Layout";
 import ProductDetils from "./pages/ProductDetils";
+import ThemeeProvider from "./Context/ThemeContext";
 
 const App = () => {
   return (
+    <ThemeeProvider>
     <div>
       <Navbar/>
       <Routes>
@@ -23,6 +25,8 @@ const App = () => {
       </Routes>
       <Footer/>
     </div>
+    </ThemeeProvider>
+    
   )
 
 };
